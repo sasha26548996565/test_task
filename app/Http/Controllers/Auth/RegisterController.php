@@ -7,10 +7,10 @@ namespace App\Http\Controllers\Auth;
 use Inertia\Inertia;
 use Inertia\Response;
 use App\DTOs\RegisterUserDTO;
+use App\Actions\Auth\RegisterUser;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Actions\Contracts\Auth\RegisterUserContract;
 
 class RegisterController extends Controller
 {
@@ -19,7 +19,7 @@ class RegisterController extends Controller
         return Inertia::render('Auth/Register');
     }
 
-    public function handle(RegisterRequest $request, RegisterUserContract $action): RedirectResponse
+    public function handle(RegisterRequest $request, RegisterUser $action): RedirectResponse
     {
         $data = RegisterUserDTO::from($request->validated());
         $action($data);

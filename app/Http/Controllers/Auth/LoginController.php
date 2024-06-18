@@ -23,7 +23,7 @@ class LoginController extends Controller
         $data = $request->validated();
 
         if (Auth::attempt($data) == false) {
-            return to_route('login.renderPage')
+            return to_route('login')
                 ->withErrors(['email' => 'Пользователь не найден!']);
         }
 

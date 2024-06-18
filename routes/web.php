@@ -14,9 +14,9 @@ Route::middleware('guest')->group(function () {
         Route::post('/', 'handle')->name('handle');
     });
 
-    Route::name('login.')->prefix('login')->controller(LoginController::class)->group(function () {
-        Route::get('/', 'renderPage')->name('renderPage');
-        Route::post('/', 'handle')->name('handle');
+    Route::name('login')->prefix('login')->controller(LoginController::class)->group(function () {
+        Route::get('/', 'renderPage');
+        Route::post('/', 'handle')->name('.handle');
     });
 });
 

@@ -2,15 +2,15 @@
 import { useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
-    email: '',
-    password: '',
-    password_confirmation: ''
+  name: '',
+  email: '',
+  password: '',
+  password_confirmation: ''
 });
 
 function register()
 {
-    form.post(route('register.handle'));
+  form.post(route('register.handle'));
 }
 </script>
 

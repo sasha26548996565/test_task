@@ -14,11 +14,17 @@ class Comment extends Model
 
     protected $fillable = [
         'text',
-        'post_id'
+        'post_id',
+        'user_id'
     ];
 
     public function post(): BelongsTo
     {
         return $this->belongsTo(Post::class, 'post_id', 'id');
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

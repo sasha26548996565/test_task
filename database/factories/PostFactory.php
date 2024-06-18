@@ -14,7 +14,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence,
-            'text' => $this->faker->text(500),
+            'text' => $this->faker->text(3000),
             'category_id' => Category::get()->random()->id,
             'user_id' => User::get()->random()->id
         ];

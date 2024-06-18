@@ -2,13 +2,13 @@
 import { useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    email: '',
-    password: '',
+  email: '',
+  password: '',
 });
 
 function login()
 {
-    form.post(route('login.handle'));
+  form.post(route('login.handle'));
 }
 </script>
 
@@ -41,7 +41,7 @@ function login()
     </div>
     <div class="flex items-center justify-between">
       <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-        Sign In
+        Войти
       </button>
     </div>
   </form>
